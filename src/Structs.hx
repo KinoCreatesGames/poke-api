@@ -85,16 +85,6 @@ typedef BerryFlavor = {
 	names:Array<NameResource>
 }
 
-typedef NamedAPIResource = {
-	name:String,
-	url:String
-}
-
-typedef NameResource = {
-	name:String,
-	language:NamedAPIResource
-}
-
 // Encounter Methods
 
 typedef EncounterMethods = {
@@ -139,7 +129,70 @@ typedef Machine = {
 
 	/**
 	 * The version group this machine applies to
-	    * aka what game this belongs to.
+	 		* aka what game this belongs to.
 	 */
+	version_group:NamedAPIResource
+}
+
+typedef Effect = {
+	/**
+	 * The localized effect text for an API resource
+	 * in a specific language.
+	 */
+	effect:String,
+
+	language:NamedAPIResource
+}
+
+typedef Encounter = {
+	min_level:Int,
+	max_level:Int,
+	conditional_values:Array<NamedAPIResource>,
+
+	/**
+	 * Percent chance of this encountering occuring
+	 */
+	chance:Int,
+
+	/**
+	 * The method by which this encounter happens
+	 */
+	method:NamedAPIResource
+}
+
+typedef NamedAPIResource = {
+	name:String,
+	url:String
+}
+
+typedef NameResource = {
+	name:String,
+	language:NamedAPIResource
+}
+
+typedef GenerationGameIndex = {
+	game_index:Int,
+	generation:NamedAPIResource
+}
+
+typedef MachineVersionDetail = {
+	machine:NameResource,
+	version_group:NamedAPIResource
+}
+
+typedef VerboseEffect = {
+	effect:String,
+	short_effect:String,
+	language:NamedAPIResource
+}
+
+typedef VersionGameIndex = {
+	game_index:Int,
+	version:NamedAPIResource
+}
+
+typedef VersionGroupFlavorText = {
+	text:String,
+	language:NamedAPIResource,
 	version_group:NamedAPIResource
 }
