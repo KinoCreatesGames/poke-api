@@ -6,15 +6,14 @@
 https://github.com/PokeAPI/pokedex-promise-v2
 
 
-## Required Libraries
+## Requirements
 
-## Lua
-* lrexlib-pcre
-* luv
-* luautf8
-* luasocket
-* lux-sua-simdjson
-* bit32
+* Have Haxe Installed
+* Have hxnodejs on your system
+* Have Node.js on your system
+* Have pokedex-promise-v2 within the project directory
+* To do this simply npm install
 
-## Python
-* pyOpenSSL
+
+## How To Compile
+`haxe compile.hxml`
