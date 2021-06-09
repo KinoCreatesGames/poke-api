@@ -1,15 +1,26 @@
-import Structs.PokemonListData;
-import Structs.PokemonSpeciesData;
-import Structs.PokemonData;
-import js.lib.Promise;
 import Structs.PokedexOptions;
+import haxe.Json;
+import Structs.Machine;
+import tink.core.Future;
+import haxe.Http;
 
-@:jsRequire('pokedex-promise-v2')
-@:native('Pokedex')
-extern class Pokedex {
-	public function new(options:PokedexOptions);
+class Pokedex {
+	public static inline var baseEndPoint = 'https://pokeapi.co/api/v2/';
 
-	public function getPokemonByName(name:String):Promise<PokemonData>;
-	public function getPokemonSpeciesByName(species:String):Promise<PokemonSpeciesData>;
-	public function getPokemonsList():Promise<PokemonListData>;
+	public function new(?pokedexOptions:PokedexOptions) {}
+
+	public function getMachineById(id:Int):Future<Machine> {
+		return loadFromUrl(baseEndPoint + 'machine/${id}').flatMap((data) -> {
+			var result:Machine = Json.parse(data);
+			return result;
+		});
+	}
+
+	private function loadFromUrl(url:String):Future<String> {
+		return Future.irreversible((handler:String -> Void) -> {
+			var http = new Http(url);
+			http.onData = handler;
+			http.request();
+		});
+	}
 }

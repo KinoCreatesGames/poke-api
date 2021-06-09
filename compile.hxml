@@ -1,0 +1,9 @@
+-lib tink_core
+-lib hxnodejs
+-cp src
+
+--dce full
+
+--main Main
+
+--js output.js
