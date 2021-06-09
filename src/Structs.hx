@@ -1,9 +1,9 @@
 typedef PokedexOptions = {
-	protocol:String,
-	hostName:String,
-	versionPath:String,
-	timeout:Int,
-	cacheLimit:Int
+	?protocol:String,
+	?hostName:String,
+	?versionPath:String,
+	?timeout:Int,
+	?cacheLimit:Int
 }
 
 typedef PokemonSprite = {
