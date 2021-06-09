@@ -9,9 +9,10 @@ class Pokedex {
 
 	public function new(?pokedexOptions:PokedexOptions) {}
 
-	public function getMachineById(id:Int):Future<Machine> {
+	public function getMachineById(id:Int) {
 		return loadFromUrl(baseEndPoint + 'machine/${id}').flatMap((data) -> {
 			var result:Machine = Json.parse(data);
+
 			return result;
 		});
 	}

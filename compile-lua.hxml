@@ -1,0 +1,11 @@
+-lib tink_core
+-cp src
+
+# --dce full
+
+# -D sys
+# -D lua-vanilla
+
+--main Main
+
+--lua output.lua

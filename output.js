@@ -9,9 +9,9 @@ function $extend(from, fields) {
 }
 function Main_main() {
 	console.log("src/Main.hx:2:","Testing PokeAPI");
-	var Pokedex1 = new Pokedex();
-	Pokedex1.getMachineById(3).handle(function(machine) {
-		console.log("src/Main.hx:5:",machine);
+	var pokedex = new Pokedex();
+	pokedex.getMachineById(3).handle(function(machine) {
+		console.log("src/Main.hx:6:",machine);
 	});
 }
 Math.__name__ = true;
