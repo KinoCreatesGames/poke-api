@@ -129,7 +129,7 @@ typedef Machine = {
 
 	/**
 	 * The version group this machine applies to
-	 		* aka what game this belongs to.
+	 						 * aka what game this belongs to.
 	 */
 	version_group:NamedAPIResource
 }
@@ -315,6 +315,20 @@ typedef SuperContestEffects = {
 	appeal:Int,
 	flavor_text_entries:Array<FlavorText>,
 	moves:Array<NamedAPIResource>
+}
+
+// Pokedex
+
+typedef PokedexT = {
+	id:Int,
+	name:String,
+	is_main_series:Bool,
+	description:Description,
+	names:Array<NameResource>,
+	pokemon_entries:Array<Pokemon>,
+	// TODO: Should be able to use.
+	region:NamedAPIResource,
+	version_groups:Array<NamedAPIResource>
 }
 
 typedef NamedAPIResource = {

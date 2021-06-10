@@ -27,5 +27,6 @@ extern class Pokedex {
 	public function getMoveTargetByName(name:String):Promise<MoveTarget>;
 	public function getContestTypeByName(name:String):Promise<Contest>;
 	public function getContestEffectById(id:Int):Promise<ContestEffects>;
+	public function getPokedexByName(name:String):Promise<Dynamic>;
 	// public function getLocationByName(name:String):Promise<>;
 }
