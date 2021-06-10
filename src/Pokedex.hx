@@ -1,6 +1,5 @@
 import Structs;
 import js.lib.Promise;
-import Structs.PokedexOptions;
 
 @:jsRequire('pokedex-promise-v2')
 @:native('Pokedex')
@@ -27,5 +26,6 @@ extern class Pokedex {
 	public function getMoveTargetByName(name:String):Promise<MoveTarget>;
 	public function getContestTypeByName(name:String):Promise<Contest>;
 	public function getContestEffectById(id:Int):Promise<ContestEffects>;
+	public function getPokedexByName(name:String):Promise<Pokedex>;
 	// public function getLocationByName(name:String):Promise<>;
 }
