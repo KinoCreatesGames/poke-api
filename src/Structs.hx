@@ -319,7 +319,7 @@ typedef SuperContestEffects = {
 
 // Pokedex
 
-typedef PokedexT = {
+typedef Pokedex = {
 	id:Int,
 	name:String,
 	is_main_series:Bool,
