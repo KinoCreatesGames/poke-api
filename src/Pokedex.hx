@@ -1,6 +1,5 @@
 import Structs;
 import js.lib.Promise;
-import Structs.PokedexOptions;
 
 @:jsRequire('pokedex-promise-v2')
 @:native('Pokedex')
