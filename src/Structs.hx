@@ -289,6 +289,34 @@ typedef MoveTarget = {
 	names:Array<NameResource>
 }
 
+// Contest
+
+typedef Contest = {
+	id:Int,
+	name:String,
+	berry_flavor:NamedAPIResource,
+	names:Array<{
+		name:String,
+		color:String,
+		language:NameResource
+	}>
+}
+
+typedef ContestEffects = {
+	id:Int,
+	appeal:Int,
+	jam:Int,
+	effect_entries:Array<Effect>,
+	flavor_text_entries:Array<FlavorText>
+}
+
+typedef SuperContestEffects = {
+	id:Int,
+	appeal:Int,
+	flavor_text_entries:Array<FlavorText>,
+	moves:Array<NamedAPIResource>
+}
+
 typedef NamedAPIResource = {
 	name:String,
 	url:String
@@ -329,4 +357,11 @@ typedef VersionGroupFlavorText = {
 typedef Description = {
 	description:String,
 	language:NamedAPIResource
+}
+
+typedef EggGroup = {
+	id:Int,
+	name:String,
+	names:Array<NameResource>,
+	pokemon_species:Array<NamedAPIResource>
 }
