@@ -129,7 +129,7 @@ typedef Machine = {
 
 	/**
 	 * The version group this machine applies to
-	 		* aka what game this belongs to.
+	 						 * aka what game this belongs to.
 	 */
 	version_group:NamedAPIResource
 }
@@ -158,6 +158,177 @@ typedef Encounter = {
 	 * The method by which this encounter happens
 	 */
 	method:NamedAPIResource
+}
+
+// Item Information
+
+typedef Item = {
+	id:Int,
+	name:String,
+	cost:Int,
+	fling_power:Int,
+	fling_effect:NamedAPIResource,
+	attributes:Array<NamedAPIResource>,
+	category:NamedAPIResource,
+	effect_entries:Array<{
+		effect:String,
+		short_effect:String,
+		language:NamedAPIResource
+	}>,
+	flavor_text_entries:Array<VersionGroupFlavorText>,
+	game_indices:Array<{
+		game_index:Int,
+		generation:NamedAPIResource
+	}>,
+	names:Array<NameResource>,
+	sprites:{
+		default_:String
+	},
+	held_by_pokemon:Array<{
+		pokemon:NamedAPIResource,
+		version_details:Array<{
+			rarity:Int,
+			version:NamedAPIResource
+		}>
+	}>,
+	baby_trigger_for:NamedAPIResource,
+	machines:Array<MachineVersionDetail>
+}
+
+typedef ItemAttributes = {
+	id:Int,
+	name:String,
+	description:Array<Description>,
+	items:Array<NamedAPIResource>,
+	names:Array<NameResource>
+}
+
+typedef ItemCategory = {
+	id:Int,
+	name:String,
+	items:Array<NamedAPIResource>,
+	names:Array<NameResource>,
+	pocket:NamedAPIResource
+}
+
+typedef ItemFlingEffect = {
+	id:Int,
+	name:String,
+	effect_entries:Array<Effect>,
+	items:Array<NamedAPIResource>
+}
+
+typedef ItemPocket = {
+	id:Int,
+	name:String,
+	categories:Array<NamedAPIResource>,
+	names:Array<NameResource>
+}
+
+// Move Information
+
+typedef Move = {
+	id:Int,
+	name:String,
+	accuracy:Int,
+	effect_chance:Int,
+	pp:Int,
+	priority:Int,
+	power:Int,
+
+	contest_type:NamedAPIResource,
+	contest_effect:NamedAPIResource,
+	generation:NamedAPIResource,
+	names:Array<NameResource>,
+	super_contest_effect:NamedAPIResource,
+	target:NamedAPIResource,
+	type:NamedAPIResource,
+}
+
+typedef MoveAilment = {
+	id:Int,
+	name:String,
+	moves:Array<NamedAPIResource>,
+	names:Array<NameResource>
+}
+
+typedef MoveStyle = {
+	id:Int,
+	name:String,
+	names:Array<NameResource>,
+}
+
+typedef MoveCategory = {
+	id:Int,
+	name:String,
+	moves:Array<NamedAPIResource>,
+	descriptions:Array<Description>
+}
+
+typedef MoveDamage = {
+	id:Int,
+	name:String,
+	descriptions:Array<Description>,
+	moves:Array<NamedAPIResource>,
+	names:Array<NameResource>
+}
+
+typedef MoveLearnMethod = {
+	id:Int,
+	name:String,
+	descriptions:Array<Description>,
+	names:Array<NameResource>,
+	version_groups:Array<NamedAPIResource>
+}
+
+typedef MoveTarget = {
+	id:Int,
+	name:String,
+	descriptions:Array<Description>,
+	moves:Array<NamedAPIResource>,
+	names:Array<NameResource>
+}
+
+// Contest
+
+typedef Contest = {
+	id:Int,
+	name:String,
+	berry_flavor:NamedAPIResource,
+	names:Array<{
+		name:String,
+		color:String,
+		language:NameResource
+	}>
+}
+
+typedef ContestEffects = {
+	id:Int,
+	appeal:Int,
+	jam:Int,
+	effect_entries:Array<Effect>,
+	flavor_text_entries:Array<FlavorText>
+}
+
+typedef SuperContestEffects = {
+	id:Int,
+	appeal:Int,
+	flavor_text_entries:Array<FlavorText>,
+	moves:Array<NamedAPIResource>
+}
+
+// Pokedex
+
+typedef PokedexInfo = {
+	id:Int,
+	name:String,
+	is_main_series:Bool,
+	description:Description,
+	names:Array<NameResource>,
+	pokemon_entries:Array<Pokemon>,
+	// TODO: Should be able to use.
+	region:NamedAPIResource,
+	version_groups:Array<NamedAPIResource>
 }
 
 typedef NamedAPIResource = {
@@ -195,4 +366,16 @@ typedef VersionGroupFlavorText = {
 	text:String,
 	language:NamedAPIResource,
 	version_group:NamedAPIResource
+}
+
+typedef Description = {
+	description:String,
+	language:NamedAPIResource
+}
+
+typedef EggGroup = {
+	id:Int,
+	name:String,
+	names:Array<NameResource>,
+	pokemon_species:Array<NamedAPIResource>
 }
