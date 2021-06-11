@@ -5,7 +5,7 @@ import js.lib.Promise;
 @:native('Pokedex')
 extern class Pokedex {
 	public function new(?options:PokedexOptions);
-	public function getPokemonByName(name:String):Promise<Pokemon>;
+	public function getPokegmonByName(name:String):Promise<Pokemon>;
 	public function getPokemonSpeciesByName(species:String):Promise<PokemonSpecies>;
 	public function getPokemonsList():Promise<PokemonList>;
 	public function getBerryByName(berryName:String):Promise<Berry>;
