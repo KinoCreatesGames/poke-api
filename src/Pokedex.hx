@@ -1,6 +1,5 @@
 import Structs;
 import js.lib.Promise;
-import Structs.PokedexOptions;
 
 @:jsRequire('pokedex-promise-v2')
 @:native('Pokedex')
@@ -35,6 +34,8 @@ extern class Pokedex {
 	public function getGenderByName(gender: String):Promise<Gender>;
 	public function getGrowthRateByName(growthRate: String):Promise<GrowthRate>;
 	public function getNatureByName(nature: String):Promise<Nature>;
+	public function getGenerationByName(generationByName: String):Promise<GenerationByName>;
+	public function getSuperContestEffectById(id: Int):Promise<SuperContestEffect>;
 	public function getPokeathlonStatByName(pokeathlonStat: String):Promise<PokeathlonStat>;
 	public function getPokemonColorByName(pokemonColor: String):Promise<PokemonColor>;
 	public function getPokemonFormByName(pokemonForm: String):Promise<PokemonForm>;
@@ -42,4 +43,16 @@ extern class Pokedex {
 	public function getPokemonShapeByName(pokemonShape: String):Promise<PokemonShape>;
 	public function getStatByName(stat: String):Promise<Stat>;
 	public function getTypeByName(type: String):Promise<Type>;
+	public function getMachineById(id:Int):Promise<Machine>;
+	public function getMoveByName(name:String):Promise<Move>;
+	public function getMoveAilmentByName(name:String):Promise<MoveAilment>;
+	public function getMoveBattleStyleByName(name:String):Promise<MoveStyle>;
+	public function getMoveCategoryByName(name:String):Promise<MoveCategory>;
+	public function getMoveDamageClassByName(name:String):Promise<MoveDamage>;
+	public function getMoveLearnMethodByName(name:String):Promise<MoveLearnMethod>;
+	public function getMoveTargetByName(name:String):Promise<MoveTarget>;
+	public function getContestTypeByName(name:String):Promise<Contest>;
+	public function getContestEffectById(id:Int):Promise<ContestEffects>;
+	public function getPokedexByName(name:String):Promise<PokedexInfo>;
+	// public function getLocationByName(name:String):Promise<>;
 }
