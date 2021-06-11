@@ -35,6 +35,11 @@ extern class Pokedex {
 	public function getGenderByName(gender: String):Promise<Gender>;
 	public function getGrowthRateByName(growthRate: String):Promise<GrowthRate>;
 	public function getNatureByName(nature: String):Promise<Nature>;
-}
-
+	public function getPokeathlonStatByName(pokeathlonStat: String):Promise<PokeathlonStat>;
+	public function getPokemonColorByName(pokemonColor: String):Promise<PokemonColor>;
+	public function getPokemonFormByName(pokemonForm: String):Promise<PokemonForm>;
+	public function getPokemonHabitatByName(pokemonHabitat: String):Promise<PokemonHabitat>;
+	public function getPokemonShapeByName(pokemonShape: String):Promise<PokemonShape>;
+	public function getStatByName(stat: String):Promise<Stat>;
+	public function getTypeByName(type: String):Promise<Type>;
 }
