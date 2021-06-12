@@ -379,3 +379,110 @@ typedef EggGroup = {
 	names:Array<NameResource>,
 	pokemon_species:Array<NamedAPIResource>
 }
+
+typedef EvolutionChain = {
+	id:Int,
+	baby_trigger_item: NamedAPIResource,
+	chain: ChainLink
+}
+
+typedef ChainLink = {
+	is_baby: Bool,
+	species: NamedAPIResource,
+	evolution_details: Array<EvolutionDetail>,
+	evolves_to: Array<ChainLink>
+}
+
+typedef EvolutionDetail = {
+	item: NamedAPIResource,
+	trigger: NamedAPIResource,
+	gender: Int,
+	held_item: NamedAPIResource,
+	known_move: NamedAPIResource,
+	known_move_type: NamedAPIResource,
+	location: NamedAPIResource,
+	min_level: Int,
+	min_happiness: Int,
+	min_beauty: Int,
+	min_affection: Int,
+	needs_overworld_rain: Bool,
+	party_species: NamedAPIResource,
+	party_type: NamedAPIResource,
+	relative_physical_stats: Int,
+	time_of_day: String,
+	trade_species: NamedAPIResource,
+	turn_upside_down: Bool
+}
+
+typedef EvolutionTrigger = {
+	id: Int,
+	name: String,
+	names: Array<NameResource>,
+	pokemon_species: Array<NamedAPIResource>
+}
+
+typedef Version = {
+	id: Int,
+	name: String,
+	names: Array<NameResource>,
+	version_group: NamedAPIResource
+}
+
+typedef VersionGroup = {
+	id: Int,
+	name: String,
+	order: Int,
+	generation: NamedAPIResource,
+	move_learn_methods: NamedAPIResource,
+	pokedexes: NamedAPIResource,
+	regions: NamedAPIResource,
+	versions: NamedAPIResource
+}
+
+typedef ItemAttribute = {
+	id: Int,
+	name: String,
+	items: NamedAPIResource,
+	names: Array<NamedAPIResource>,
+	descriptions: Array<Description>
+}
+
+typedef Location = {
+	id: Int,
+	name: String,
+	region: NamedAPIResource,
+	names: Array<NameResource>,
+	game_indices: Array<GenerationGameIndex>,
+	areas: Array<NamedAPIResource>
+}
+
+typedef LocationArea = {
+	id: Int,
+	name: String,
+	game_index: Int,
+	encounter_method_rates: Array<EncounterMethodRate>,
+	location: NamedAPIResource,
+	names: Array<NameResource>,
+	pokemon_encounters: Array<PokemonEncounter>
+}
+
+typedef EncounterMethodRate = {
+	encounter_method: NamedAPIResource,
+	version_details: Array<EncounterVersionDetails>
+}
+
+typedef EncounterVersionDetails = {
+	rate: Int,
+	version: NamedAPIResource
+}
+
+typedef PokemonEncounter = {
+	pokemon: NamedAPIResource,
+	version_details: Array<VersionEncounterDetails>
+}
+
+typedef VersionEncounterDetails = {
+	version: NamedAPIResource,
+	max_chance: Int,
+	encounter_details: Array<Encounter>
+}
