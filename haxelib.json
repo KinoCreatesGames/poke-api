@@ -1,6 +1,6 @@
 {
   "name": "poke-api",
-  "url" : "https://github.com/KinoCreatesGames/toy-box",
+  "url" : "https://github.com/KinoCreatesGames/poke-api",
   "license": "MIT",
   "tags": ["utilities", "KinoCreates", "js", "poke-api", "pokemon", "nodejs"],
   "description": "Externs for the pokedex-promise-v2 API made in Haxe",
