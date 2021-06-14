@@ -746,3 +746,474 @@ typedef EndPointList = {
   	version: String,
   	version_group: String
 }
+
+typedef BerryList = {
+	count:Int,
+	results:Array<BerryListResult>
+}
+
+typedef BerryListResult = {
+	url:String,
+	name:String
+}
+
+typedef BerryFirmnessList = {
+	count:Int,
+	results:Array<BerryFirmnessListResult>
+}
+
+typedef BerryFirmnessListResult = {
+	url:String,
+	name:String
+}
+
+typedef BerryFlavorList = {
+	count:Int,
+	results:Array<BerryFlavorListResult>
+}
+
+typedef BerryFlavorListResult = {
+	url:String,
+	name:String
+}
+
+typedef ContestTypeList = {
+	count:Int,
+	results:Array<ContestTypeListResult>
+}
+
+typedef ContestTypeListResult = {
+	url:String,
+	name:String
+}
+
+typedef ContestEffectList = {
+	count:Int,
+	results:Array<ContestEffectListResult>
+}
+
+typedef ContestEffectListResult = {
+	url:String,
+	name:String
+}
+
+typedef SuperContestEffectList = {
+	count:Int,
+	results:Array<SuperContestEffectListResult>
+}
+
+typedef SuperContestEffectListResult = {
+	url:String,
+	name:String
+}
+
+typedef EncounterConditonValueList = {
+	count:Int,
+	results:Array<EncounterConditonValueListResult>
+}
+
+typedef EncounterConditonValueListResult = {
+	url:String,
+	name:String
+}
+
+
+typedef EncounterMethodList = {
+	count:Int,
+	results:Array<EncounterMethodListResult>
+}
+
+typedef EncounterMethodListResult = {
+	url:String,
+	name:String
+}
+
+typedef EncounterCoditionList = {
+	count:Int,
+	results:Array<EncounterCoditionListResult>
+}
+
+typedef EncounterCoditionListResult = {
+	url:String,
+	name:String
+}
+
+typedef EvolutionChainList = {
+	count:Int,
+	results:Array<EvolutionChainListResult>
+}
+
+typedef EvolutionChainListResult = {
+	url:String,
+	name:String
+}
+
+typedef EvolutionTriggerList = {
+	count:Int,
+	results:Array<EvolutionTriggerListResult>
+}
+
+typedef EvolutionTriggerListResult = {
+	url:String,
+	name:String
+}
+
+typedef GenerationList = {
+	count:Int,
+	results:Array<GenerationListResult>
+}
+
+typedef GenerationListResult = {
+	url:String,
+	name:String
+}
+
+typedef PokedexList = {
+	count:Int,
+	results:Array<PokedexListResult>
+}
+
+typedef PokedexListResult = {
+	url:String,
+	name:String
+}
+
+typedef VersionList = {
+	count:Int,
+	results:Array<VersionListResult>
+}
+
+typedef VersionListResult = {
+	url:String,
+	name:String
+}
+
+typedef VersionGroupList = {
+	count:Int,
+	results:Array<VersionGroupListResult>
+}
+
+typedef VersionGroupListResult = {
+	url:String,
+	name:String
+}
+
+typedef ItemList = {
+	count:Int,
+	results:Array<ItemListResult>
+}
+
+typedef ItemListResult = {
+	url:String,
+	name:String
+}
+
+typedef ItemAttributeList = {
+	count:Int,
+	results:Array<ItemAttributeListResult>
+}
+
+typedef ItemAttributeListResult = {
+	url:String,
+	name:String
+}
+
+typedef ItemCategoryList = {
+	count:Int,
+	results:Array<ItemCategoryListResult>
+}
+
+typedef ItemCategoryListResult = {
+	url:String,
+	name:String
+}
+
+typedef ItemFlingEffectList = {
+	count:Int,
+	results:Array<ItemFlingEffectListResult>
+}
+
+typedef ItemFlingEffectListResult = {
+	url:String,
+	name:String
+}
+
+typedef ItemPocketList = {
+	count:Int,
+	results:Array<ItemPocketListResult>
+}
+
+typedef ItemPocketListResult = {
+	url:String,
+	name:String
+}
+
+typedef MachineList = {
+	count:Int,
+	results:Array<MachineListResult>
+}
+
+typedef MachineListResult = {
+	url:String,
+	name:String
+}
+
+typedef MoveList = {
+	count:Int,
+	results:Array<MoveListResult>
+}
+
+typedef MoveListResult = {
+	url:String,
+	name:String
+}
+
+typedef MoveAilmentList = {
+	count:Int,
+	results:Array<MoveAilmentListResult>
+}
+
+typedef MoveAilmentListResult = {
+	url:String,
+	name:String
+}
+
+typedef MoveBattleStyleList = {
+	count:Int,
+	results:Array<MoveBattleStyleListResult>
+}
+
+typedef MoveBattleStyleListResult = {
+	url:String,
+	name:String
+}
+
+typedef MoveCategoryList = {
+	count:Int,
+	results:Array<MoveCategoryListResult>
+}
+
+typedef MoveCategoryListResult = {
+	url:String,
+	name:String
+}
+
+typedef MoveDamageClassList = {
+	count:Int,
+	results:Array<MoveDamageClassListResult>
+}
+
+typedef MoveDamageClassListResult = {
+	url:String,
+	name:String
+}
+
+typedef MoveLearnMethodList = {
+	count:Int,
+	results:Array<MoveLearnMethodListResult>
+}
+
+typedef MoveLearnMethodListResult = {
+	url:String,
+	name:String
+}
+
+typedef MoveTargetList = {
+	count:Int,
+	results:Array<MoveTargetListResult>
+}
+
+typedef MoveTargetListResult = {
+	url:String,
+	name:String
+}
+
+typedef LocationList = {
+	count:Int,
+	results:Array<LocationListResult>
+}
+
+typedef LocationListResult = {
+	url:String,
+	name:String
+}
+
+typedef LocationAreaList = {
+	count:Int,
+	results:Array<LocationAreaListResult>
+}
+
+typedef LocationAreaListResult = {
+	url:String,
+	name:String
+}
+
+typedef PalParkAreaList = {
+	count:Int,
+	results:Array<PalParkAreaListResult>
+}
+
+typedef PalParkAreaListResult = {
+	url:String,
+	name:String
+}
+
+typedef RegionList = {
+	count:Int,
+	results:Array<RegionListResult>
+}
+
+typedef RegionListResult = {
+	url:String,
+	name:String
+}
+
+typedef AbilityList = {
+	count:Int,
+	results:Array<AbilityListResult>
+}
+
+typedef AbilityListResult = {
+	url:String,
+	name:String
+}
+
+typedef CharacteristicList = {
+	count:Int,
+	results:Array<CharacteristicListResult>
+}
+
+typedef CharacteristicListResult = {
+	url:String,
+	name:String
+}
+
+typedef EggGroupList = {
+	count:Int,
+	results:Array<EggGroupListResult>
+}
+
+typedef EggGroupListResult = {
+	url:String,
+	name:String
+}
+
+typedef GenderList = {
+	count:Int,
+	results:Array<GenderListResult>
+}
+
+typedef GenderListResult = {
+	url:String,
+	name:String
+}
+
+typedef GrowthRateList = {
+	count:Int,
+	results:Array<GrowthRateListResult>
+}
+
+typedef GrowthRateListResult = {
+	url:String,
+	name:String
+}
+
+typedef NatureList = {
+	count:Int,
+	results:Array<NatureListResult>
+}
+
+typedef NatureListResult = {
+	url:String,
+	name:String
+}
+
+typedef PokeathlonStatList = {
+	count:Int,
+	results:Array<PokeathlonStatListResult>
+}
+
+typedef PokeathlonStatListResult = {
+	url:String,
+	name:String
+}
+
+typedef PokemonColorList = {
+	count:Int,
+	results:Array<PokemonColorListResult>
+}
+
+typedef PokemonColorListResult = {
+	url:String,
+	name:String
+}
+
+typedef PokemonFormList = {
+	count:Int,
+	results:Array<PokemonFormListResult>
+}
+
+typedef PokemonFormListResult = {
+	url:String,
+	name:String
+}
+
+typedef PokemonHabitatsList = {
+	count:Int,
+	results:Array<PokemonHabitatsListResult>
+}
+
+typedef PokemonHabitatsListResult = {
+	url:String,
+	name:String
+}
+
+typedef PokemonShapeList = {
+	count:Int,
+	results:Array<PokemonShapeListResult>
+}
+
+typedef PokemonShapeListResult = {
+	url:String,
+	name:String
+}
+
+typedef PokemonSpeciesList = {
+	count:Int,
+	results:Array<PokemonSpeciesListResult>
+}
+
+typedef PokemonSpeciesListResult = {
+	url:String,
+	name:String
+}
+
+typedef StatList = {
+	count:Int,
+	results:Array<StatListResult>
+}
+
+typedef StatListResult = {
+	url:String,
+	name:String
+}
+
+typedef TypeList = {
+	count:Int,
+	results:Array<TypeListResult>
+}
+
+typedef TypeListResult = {
+	url:String,
+	name:String
+}
+
+typedef LanguageList = {
+	count:Int,
+	results:Array<LanguageListResult>
+}
+
+typedef LanguageListResult = {
+	url:String,
+	name:String
+}

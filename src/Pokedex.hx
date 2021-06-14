@@ -34,7 +34,7 @@ extern class Pokedex {
 	public function getGenderByName(gender:String):Promise<Gender>;
 	public function getGrowthRateByName(growthRate:String):Promise<GrowthRate>;
 	public function getNatureByName(nature:String):Promise<Nature>;
-	public function getGenerationByName(generationByName:String):Promise<GenerationByName>;
+	public function getGenerationByName(generationByName:String):Promise<Generation>;
 	public function getSuperContestEffectById(id:Int):Promise<SuperContestEffect>;
 	public function getPokeathlonStatByName(pokeathlonStat:String):Promise<PokeathlonStat>;
 	public function getPokemonColorByName(pokemonColor:String):Promise<PokemonColor>;
@@ -54,7 +54,7 @@ extern class Pokedex {
 	public function getContestTypeByName(name:String):Promise<Contest>;
 	public function getContestEffectById(id:Int):Promise<ContestEffects>;
 	public function getPokedexByName(name:String):Promise<PokedexInfo>;
-	public function getEndpointsList():Promise<EndPoint>;
+	public function getEndpointsList():Promise<EndPointList>;
 	public function getBerriesList():Promise<BerryList>;
 	public function getBerriesFirmnesssList():Promise<BerryFirmnessList>;
 	public function getBerriesFlavorsList():Promise<BerryFlavorList>;
@@ -102,7 +102,6 @@ extern class Pokedex {
 	public function getStatsList():Promise<StatList>;
 	public function getTypesList():Promise<TypeList>;
 	public function getLanguagesList():Promise<LanguageList>;
-	// public function getLocationByName(name:String):Promise<>;
 
 
 }
