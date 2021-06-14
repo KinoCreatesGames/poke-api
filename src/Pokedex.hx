@@ -102,7 +102,6 @@ extern class Pokedex {
 	public function getStatsList():Promise<StatList>;
 	public function getTypesList():Promise<TypeList>;
 	public function getLanguagesList():Promise<LanguageList>;
-	// public function getLocationByName(name:String):Promise<>;
 
 
 }
