@@ -7,7 +7,7 @@
   "version": "0.7.1",
   "classPath": "src/",
   "releasenote": "Initial release of Haxe pokedex-promise-v2 API externs",
-  "contributors": ["Kino", "DanJ"],
+  "contributors": ["Kino"],
   "dependencies": {
   }
 }
