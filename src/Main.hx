@@ -2,8 +2,10 @@ function main() {
 	trace('Testing PokeAPI');
 	var pokedex = new Pokedex();
 
-	pokedex.getMachineById(3).handle((machine) -> {
-		trace(machine);
+	pokedex.getPokemonByName('pikachu').then((value) -> {
+		trace(value.name);
 	});
-	trace(pokedex);
+	pokedex.getAbilityByName('stench').then((value) -> {
+		trace(value.names);
+	});
 }
