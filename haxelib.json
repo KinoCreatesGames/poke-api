@@ -7,7 +7,7 @@
   "version": "0.3.1",
   "classPath": "src/",
   "releasenote": "Initial release of Haxe Poke API",
-  "contributors": ["Kino"],
+  "contributors": ["Kino","DanJ"],
   "dependencies": {
   }
 }
