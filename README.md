@@ -14,6 +14,15 @@ https://github.com/PokeAPI/pokedex-promise-v2
 * Have pokedex-promise-v2 within the project directory
 * To do this simply npm install
 
+```haxe
+//Example Usage
+	pokedex.getPokemonByName('pikachu').then((value) -> {
+		trace(value.name);
+	});
+	pokedex.getAbilityByName('stench').then((value) -> {
+		trace(value.names);
+	});
+```
 
 ## How To Compile
 `haxe compile.hxml`
